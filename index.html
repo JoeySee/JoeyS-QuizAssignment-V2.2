@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Star Trek Quiz!</title>
+    <script src="quizproject.js"></script>
+    <link rel="stylesheet" type="text/css" href="quizproject.css" />
+    <link rel="icon" type="image/x-icon" href="quizimages/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A quiz about the Star Trek shows Next Generation, Voyager, and Deep Space Nine"
+    />
+    <meta name="theme-color" content="#000" />
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/apple-icon-512x512.png" />
+  </head>
+  <body>
+    <div id="lightbox" onclick="closeLightBox()">
+      <div id="message">This is the message</div>
+    </div>
+
+    <h1 id="header">Star Trek Quiz</h1>
+
+    <div id="container">
+      <div class="grid-container">
+        <div class="header">
+          <div id="question">The Question</div>
+        </div>
+
+        <div class="left" id="left">
+          <div>
+            <div class="options" id="a" onclick="markIt(ans1)">A.</div>
+            <div class="options" id="b" onclick="markIt(ans2)">B.</div>
+            <div class="options" id="c" onclick="markIt(ans3)">C.</div>
+            <div class="options" id="d" onclick="markIt(ans4)">D.</div>
+          </div>
+
+          <div id="hint">
+            <!-- Hint Goes Here -->
+          </div>
+        </div>
+
+        <div class="right" id="right">
+          <img id="image" src="quizimages/q1.jpg" alt="Undefined Background" />
+        </div>
+
+        <div class="footer1" id="footer1">
+          <p id="hintButton">Hint?</p>
+          <div id="countdown"></div>
+        </div>
+
+        <div class="footer2" id="footer2">
+          <p><span id="score"></span></p>
+          <div id="menuBtn">Return to Menu</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

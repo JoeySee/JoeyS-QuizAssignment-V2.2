@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+
+  background-image: url(quizimages/mobileBackground.jpg);
+  background-size: cover;
+}
+
+/* Style the header */
+
+#header {
+  font-size: 30pt;
+
+  text-align: center;
+
+  border: 5px solid #bf0f1e;
+  border-radius: 8px;
+
+  width: 80vw;
+
+  margin-left: 10%;
+  background-color: #021f59;
+  color: #f2b705;
+}
+
+#container {
+  width: 100vw;
+  height: 90vh;
+  text-align: center;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "left"
+    "right"
+    "footer1"
+    "footer2";
+
+  width: 90vw !important;
+  background-color: #021f59;
+  height: 90vh;
+
+  margin-left: 5%;
+}
+
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+
+  height: 10vh;
+}
+
+.left,
+.right {
+  height: 30vh !important;
+  background-color: #261e17;
+}
+
+.left,
+.right,
+.header,
+.footer1,
+.footer2 {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  background-color: #021f59;
+  color: #f2b705;
+
+  padding: 5px;
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  height: 50vh !important;
+  color: #bebfc2;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  width: 100%;
+  overflow:none;
+}
+
+/* Style the footer */
+.footer1 {
+  grid-area: footer1;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer2 {
+  grid-area: footer2;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer1,
+.footer2 {
+  color: #bebfc2;
+
+  font-size: 120%;
+}
+
+#question {
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.options {
+  font-size: 15pt;
+  padding: 0.4em;
+}
+
+#lightbox {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#message {
+  width: 400px;
+  height: 400px;
+  min-width: 400px;
+  padding-top: 0px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(quizimages/starfleetlogo.webp);
+  background-size: cover;
+  color: #f2b705;
+  text-align: center;
+  font-size: 25pt;
+  font-weight: bold;
+  /* vertically and horizontally center the text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#hint {
+  font-size: 120%;
+}
+
+#restart {
+  height: 50px;
+  width: 50%;
+  padding: 10px;
+  background-color: #021f59;
+  border: solid 5px #bf0f1e;
+  border-radius: 5px;
+  color: #f2b705;
+  font-size: 15pt;
+  margin-left: 25%;
+}
+
+.welcomeMsg {
+  font-size: 15pt;
+  color: #bebfc2;
+}
+
+/* Tablet Version */
+@media (min-width: 768px) {
+  .grid-container {
+    width: 70% ;
+    margin-left: 15%;
+    border: 5px solid #bf0f1e;
+    border-radius: 8px;
+    height: 100vh;
+  }
+
+  .options {
+    font-size: 15pt;
+  }
+}
+
+@media (min-width: 800px) {
+  .grid-container {
+    width: 60%;
+  }
+
+  .left {
+    height: 30vh !important;
+  }
+}
+
+/* Desktop Version */
+@media (min-width: 1025px) {
+  .grid-container {
+    grid-template-areas:
+      "header header header header"
+      "left left right right"
+      "footer1 footer1 footer2 footer2";
+
+    margin-left: 15vw;
+    margin-right: 20vw;
+
+    width: 65vw !important;
+    height: 84vh !important;
+  }
+  .header {
+    height: 10vh !important;
+  }
+  .left,
+  .right {
+    height: 25vh !important;
+  }
+  .footer1,
+  .footer2 {
+    height: 12vh !important;
+  }
+  #header {
+    width: 30vw;
+
+    margin-left: 35vw;
+  }
+
+  body {
+    background-image: url(quizimages/spaceBackground.jpg);
+    background-size: cover;
+  }
+  
+}
